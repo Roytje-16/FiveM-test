@@ -12,7 +12,7 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Build client
-        run: dotnet build FiveM-test/CSharpClientCheck.csproj
+        run: dotnet build CSharpClientCheck.csproj -c Release
       - name: Prepare resource
         run: cp csharp-client-check-broncode/bin/Release/netstandard2.0/CSharpClientCheck.net.dll csharp-client-check-broncode/src/
       - uses: actions/upload-artifact@v4
