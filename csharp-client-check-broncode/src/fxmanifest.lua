@@ -1,0 +1,6 @@
+fx_version 'cerulean'
+game 'gta5'
+name 'CSharp Client Check'
+version '1.0.0'
+client_script 'CSharpClientCheck.net.dll'
+server_script 'server.lua'

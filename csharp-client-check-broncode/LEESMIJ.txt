@@ -1,0 +1,13 @@
+C# clientdiagnose - broncodepakket (DLL MOET NOG GEBOUWD WORDEN)
+Dit is geen direct installeerbare FiveM-resource: een .NET SDK is vereist om de DLL te compileren.
+
+Snelste route met GitHub:
+1. Upload de INHOUD van deze ZIP naar een nieuwe GitHub repository.
+2. Open Actions > Build CSharp Client Check > Run workflow.
+3. Download het artifact 'csharp-client-check' na een succesvolle build.
+4. Plaats de uitgepakte map onder resources/[local]/csharp-client-check
+5. Voeg 'ensure csharp-client-check' toe aan server.cfg.
+6. Herstart de server en verbind.
+7. Zoek in txAdmin '[CSHARP-CHECK] C# client geladen'. Druk daarna F9.
+
+Als de build faalt, deel de foutmelding uit Actions. De code is niet in deze omgeving gecompileerd of getest.
