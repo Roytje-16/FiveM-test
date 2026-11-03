@@ -5,7 +5,6 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CitizenFX.FiveM.Client"><HintPath>lib/CitizenFX.FiveM.Client.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="CitizenFX.FiveM.Shared"><HintPath>lib/CitizenFX.FiveM.Shared.dll</HintPath><Private>false</Private></Reference>
+    <PackageReference Include="CitizenFX.Core.Client" Version="*" />
   </ItemGroup>
 </Project>
