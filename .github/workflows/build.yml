@@ -1,8 +1,12 @@
+
 name: Build CSharp Client Check
+
 'on':
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,11 +15,16 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
+
       - name: Build client
-        run: dotnet build CSharpClientCheck.csproj -c Release
+        run: dotnet build csharp-client-check-broncode/CSharpClientCheck.csproj -c Release
+
       - name: Prepare resource
-        run: cp csharp-client-check-broncode/bin/Release/netstandard2.0/CSharpClientCheck.net.dll csharp-client-check-broncode/src/
-      - uses: actions/upload-artifact@v4
+        run: |
+          cp csharp-client-check-broncode/bin/Release/netstandard2.0/CSharpClientCheck.net.dll csharp-client-check-broncode/src/
+
+      - name: Upload resource
+        uses: actions/upload-artifact@v4
         with:
           name: csharp-client-check
           path: csharp-client-check-broncode/src/
