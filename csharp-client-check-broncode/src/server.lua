@@ -1,6 +1,0 @@
-RegisterNetEvent('csharpcheck:loaded', function()
-    print(('[CSHARP-CHECK] C# client geladen voor speler %s'):format(source))
-end)
-RegisterNetEvent('csharpcheck:pressed', function()
-    print(('[CSHARP-CHECK] F9 ontvangen van speler %s'):format(source))
-end)
